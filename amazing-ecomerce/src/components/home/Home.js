@@ -8,9 +8,9 @@ function Home() {
         <div className="home">
             <div className="home_container">
                 <img
-                    className="home_image"
+                    className="home_bkgrd"
                     src={HeroImg}
-                    alt="Hero-image"
+                    alt="Hero-bkgrd"
                 />
             </div>
 
@@ -21,6 +21,7 @@ function Home() {
                     price={29.99}
                     image='https://m.media-amazon.com/images/I/51N-u8AsmdL.jpg'
                     rating={5}
+                    btn
                 />
                 <Product
                     id='123452'
@@ -28,6 +29,7 @@ function Home() {
                     price={239.0}
                     rating={4}
                     image='https://images-na.ssl-images-amazon.com/images/I/61sl-%2BAmBvL._AC_SY450_.jpg'
+                    btn
                 />
             </div>
 
@@ -38,6 +40,7 @@ function Home() {
                     price={199.99}
                     rating={4}
                     image='https://m.media-amazon.com/images/I/81Iu41zFPwL._AC_SX148_SY213_QL70_.jpg'
+                    btn
                 />
                 <Product
                     id='23445930'
@@ -45,6 +48,7 @@ function Home() {
                     price={598.99}
                     rating={4}
                     image='https://m.media-amazon.com/images/I/61mhy8eQGEL._AC_SX148_SY213_QL70_.jpg'
+                    btn
                 />
                 <Product
                     id='3254354345'
@@ -52,6 +56,7 @@ function Home() {
                     price={598.99}
                     rating={4}
                     image='https://m.media-amazon.com/images/I/81FH2j7EnJL._AC_SX148_SY213_QL70_.jpg'
+                    btn
                 />
             </div>
 
@@ -62,6 +67,7 @@ function Home() {
                     price={1094.98}
                     rating={4}
                     image='https://m.media-amazon.com/images/I/71916r38cNL._AC_SX222_SY320_FMwebp_QL65_.jpg'
+                    btn
                 />
             </div>
         </div>
