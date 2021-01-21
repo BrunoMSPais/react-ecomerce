@@ -5,9 +5,18 @@ import './Header.css';
 // import Logo from '../../assets/images/amazing.png';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
+import { auth } from '../../firebase';
 
 function Header() {
-    const [{ basket }] = useStateValue();
+    const [{ basket, user }] = useStateValue();
+
+    // console.log('user', user)
+
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
 
     return (
         <div className='header'>
@@ -27,14 +36,16 @@ function Header() {
                 <SearchIcon className="header_searchIcon" />
             </div>
             <div className="header_nav">
-                <div className="header_option">
-                    <span className="header_optionLineOne">
-                        Hello Guest
-                    </span>
-                    <span className="header_optionLineTwo">
-                        Sign In
-                    </span>
-                </div>
+                <Link to={!user && '/login'}>
+                    <div onClick={handleAuthentication} className="header_option">
+                        <span className="header_optionLineOne">
+                            {user ? `Hello ${user.displayName || user.email}` : 'Hello Guest'}
+                        </span>
+                        <span className="header_optionLineTwo">
+                            {user ? 'Sign Out' : 'Sign In'}
+                        </span>
+                    </div>
+                </Link>
 
                 <div className="header_option">
                     <span className="header_optionLineOne">
