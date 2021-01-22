@@ -2,13 +2,13 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-  apiKey: `${process.env.FIREBASE_API_KEY}`,
-  authDomain: `${process.env.FIREBASE_AUTH_DOMAIN}`,
-  projectId: `${process.env.FIREBASE_PROJECT_ID}`,
-  storageBucket: `${process.env.FIREBASE_STORAGE_BUCKET}`,
-  messagingSenderId: `${process.env.FIREBASE_SENDER_ID}`,
-  appId: `${process.env.FIREBASE_APP_ID}`,
-  measurementId: `${process.env.FIREBASE_MEASUREMENT_ID}`
+  apiKey: "AIzaSyD8gYSXqiu7mA8fIx5TygAxKXoc2_iGGlE",
+  authDomain: "amazing-ecomerce.firebaseapp.com",
+  projectId: "amazing-ecomerce",
+  storageBucket: "amazing-ecomerce.appspot.com",
+  messagingSenderId: "772100436622",
+  appId: "1:772100436622:web:eb8bfcfb9ed0c6ee7fcfdf",
+  measurementId: "G-ZX3Z6QSR34"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
