@@ -5,8 +5,8 @@ import { useStateValue } from '../../StateProvider'
 import CheckoutProduct from './checkoutProduct/CheckoutProduct'
 
 function Checkout() {
-    const [{ basket }] = useStateValue();
-    console.log('basket: ', basket)
+    const [{ basket, user }, dispatch] = useStateValue();
+    // console.log('basket: ', basket)
     
     return (
         <div className='checkout'>
@@ -14,6 +14,7 @@ function Checkout() {
                 <img src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="ckeckout_ad" className="checkout_ad"/>
 
                 <div>
+                    <h3>Hello, {user?.email || 'Guest'}</h3>
                     <h2 className="checkout_title">
                         Your Shopping Basket
                     </h2>
